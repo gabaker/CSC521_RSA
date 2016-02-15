@@ -1,10 +1,16 @@
 #!/bin/sh
 
-if [[ "$2" != '' ]]
-then
-   exec > $2
-   exec 2>&1
-fi
+#if [[ "$2" != '' ]]
+#then
+#   exec > $2
+#   exec 2>&1
+#fi
+
+outFile="${1}.del"
+
+echo $outFile
+
+exec > $outFile
 
 cat $1 | tr -d " "
 

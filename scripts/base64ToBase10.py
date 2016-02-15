@@ -9,12 +9,14 @@ if (num_args < 2):
    print("Usage: python base64ToBase10.py file_name")
    sys.exit()
 
-#print "Converting file: " + sys.argv[1]
-
-
 inFile = open(sys.argv[1], 'r')
+outFileName = "" + sys.argv[1] + ".hex"
+outFile = open(outFileName, 'w')
+print outFileName
 
 for line in inFile:
    lineLen =  len(line) 
-   print "" + binascii.b2a_hex(base64.b64decode(line))
-   
+   outFile.write("" + str(bin(int(binascii.hexlify(base64.b64decode(line)), 16))) + "\n")
+   #base64.b64decode(line)) + "\n")
+   #binascii.b2a_hex(
+

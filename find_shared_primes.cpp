@@ -49,10 +49,9 @@ int main(int argc, char *argv[]) {
    int num_keys = 0;
 
    if (argc == 3 ) {
-      std::istringstream ss(argv[2]);
-      ss >> BASE_USED;  
+      BASE_USED = std::stoi(argv[2]);
+      std::cout << "Using Base: " << BASE_USED << std::endl; 
    }
-   std::cout << BASE_USED << std::endl;
 
    //check for user provided keylist
    if (argc < 2 || argc > 3) {
