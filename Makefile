@@ -1,4 +1,4 @@
-CC=g++
+CC=g++ -m64
 LFLAGS=-lgmp -fopenmp -lgmpxx
 CFLAGS=-std=c++0x
 DFLAGS=-D TREE_GCD

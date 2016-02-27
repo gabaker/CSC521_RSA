@@ -6,7 +6,7 @@
 #   exec 2>&1
 #fi
 
-outFile="${1}.del"
+outFile="${1}.no_delim"
 
 echo $outFile
 
