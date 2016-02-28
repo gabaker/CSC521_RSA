@@ -16,6 +16,7 @@ outFile = open(outFileName, 'w')
 print (outFileName)
 
 for line in inFile:
-   lineLen =  len(line) 
-   outFile.write("" + str(bin(int(str(line), 16))) + "\n")
+   lineLen =  len(line)
+   bin_str = str(bin(int(str(line), 16)))
+   outFile.write("" + bin_str[2:] + "\n")
    #outFile.write("" + str(int(str(line), 16)) + "\n")
